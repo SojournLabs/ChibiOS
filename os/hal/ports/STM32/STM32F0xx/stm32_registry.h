@@ -40,7 +40,7 @@
 /*===========================================================================*/
 /* STM32F030x6, STM32F030x8, STM32F030xC.                                    */
 /*===========================================================================*/
-#if defined(STM32F030x6) || defined(STM32F030x8) ||                         \
+#if defined(STM32F030x4) || defined(STM32F030x6) || defined(STM32F030x8) ||                         \
     defined(STM32F030xC) || defined(__DOXYGEN__)
 
 /* Common identifier of all STM32F030 devices.*/
