@@ -381,11 +381,9 @@ void adc_lld_start_conversion(ADCDriver *adcp) {
  * @notapi
  */
 void adc_lld_stop_conversion(ADCDriver *adcp) {
-
   dmaStreamDisable(adcp->dmastp);
   adcp->adc->CR1 = 0;
-  adcp->adc->CR2 = 0;
-  adcp->adc->CR2 = ADC_CR2_ADON;
+  adcp->adc->CR2 &= ~(ADC_CR2_SWSTART | ADC_CR2_DDS | ADC_CR2_DMA);
 }
 
 /**
